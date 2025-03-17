@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoWarrior - User</title>
+  <link rel="stylesheet" href="userMainboard.css">
+</head>
+<body>
+  <header id="userHeader">
+    <h1 id="nameGreet"></h1>
+  </header>
+  <!-- Main Dashboard -->
+  <div id="mainboard">
+    <!-- Water Conservation Section -->
+    <div class="section-container waterPart-container" role="button" tabindex="0" aria-expanded="false">
+      <h2 class="section-header">💧 Water Conservation</h2>
+    </div>
+
+    <!-- Energy Conservation Section -->
+    <div class="section-container energyPart-container" role="button" tabindex="0" aria-expanded="false">
+      <h2 class="section-header">⚡ Electricity Conservation</h2>
+    </div>
+
+    <!-- Waste Management Section -->
+    <div class="section-container wastePart-container" role="button" tabindex="0" aria-expanded="false">
+      <h2 class="section-header">♻️ Waste Management</h2>
+    </div>
+  </div>
+
+  <!-- Expanded View (Hidden by Default) -->
+  <div id="expandedView" class="expanded-view">
+    <button id="backToMainboard" class="back-button" aria-label="Back to Mainboard">🔙 Back to Mainboard</button>
+    <h2 class="expanded-header"></h2>
+    <input type="text" id="searchInput" placeholder="Search tips..." aria-label="Search tips">
+    <ul id="expandedTips" class="tips-content" aria-live="polite">
+      <!-- Dynamic Tips will be injected here -->
+    </ul>
+  </div>
+  <form id="feedbackForm" class="hidden">
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" placeholder="Share your thoughts..." ></textarea>
+    <button type="submit">Submit Feedback</button>
+</form>
+
+  <script src="userMainboard.js"></script>
+</body>
+</html>

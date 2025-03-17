@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoWarrior - Admin</title>
+  <link rel="stylesheet" href="adminManage.css">
+</head>
+<body>
+  <div id="adminDashboard">
+    <div class="action-buttons">
+      <button id="saveChanges" disabled>💾 Save Changes</button>
+      <button id="discardChanges">🗑️ Discard Changes</button>
+    </div>
+    <div id="editModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h2>Edit Tip</h2>
+        <form>
+          <input type="text" id="editTitle" placeholder="Title" required>
+          <textarea id="editDescription" placeholder="Description" required></textarea>
+          <button type="button" id="saveEdit">Save Changes</button>
+          <button type="button" onclick="document.getElementById('editModal').style.display='none';">Cancel</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Water Conservation Section -->
+    <div class="section-container waterPart-container">
+      <h2 class="section-header">💧 Water Conservation</h2>
+      <button id="toggleWaterForm" class="add-button">➕ Add Practice</button>
+      <form id="tipWaterForm" class="tip-form" style="display: none;">
+        <input type="text" id="waterTitle" placeholder="Title" required>
+        <textarea id="waterDescription" placeholder="Description" required></textarea>
+        <button type="submit">Add</button>
+      </form>
+      <h3>Existing Tips</h3>
+      <ul id="waterTipList" class="tip-list"></ul>
+    </div>
+
+    <!-- Energy Conservation Section -->
+    <div class="section-container energyPart-container">
+      <h2 class="section-header">⚡ Electricity Conservation</h2>
+      <button id="toggleEnergyForm" class="add-button">➕ Add Practice</button>
+      <form id="tipEnergyForm" class="tip-form" style="display: none;">
+        <input type="text" id="titleEnergy" placeholder="Title" required>
+        <textarea id="energyDescription" placeholder="Description" required></textarea>
+        <button type="submit">Add</button>
+      </form>
+      <h3>Existing Tips</h3>
+      <ul id="energyTipList" class="tip-list"></ul>
+    </div>
+
+    <!-- Waste Management Section -->
+    <div class="section-container wastePart-container">
+      <h2 class="section-header">♻️ Waste Management</h2>
+      <button id="toggleWasteForm" class="add-button">➕ Add Practice</button>
+      <form id="wasteForm" class="tip-form" style="display: none;">
+        <input type="text" id="titleWaste" placeholder="Title" required>
+        <textarea id="wasteDescription" placeholder="Description" required></textarea>
+        <button type="submit">Add</button>
+      </form>
+      <h3>Existing Tips</h3>
+      <ul id="wasteTipList" class="tip-list"></ul>
+    </div>
+  </div>
+
+  <script src="adminManage.js"></script>
+</body>
+</html>
